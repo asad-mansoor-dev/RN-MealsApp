@@ -7,7 +7,7 @@ import {
   Platform,
 } from "react-native";
 
-function CategoryGridTile({ title, color }) {
+function CategoryGridTile({ title, color, onPress }) {
   const { width, height } = useWindowDimensions();
   let tileWidth = 0;
   let tileHeight = 0;
@@ -28,6 +28,7 @@ function CategoryGridTile({ title, color }) {
           styles.button,
           pressed ? styles.buttonPressed : null,
         ]}
+        onPress={onPress}
       >
         <View style={[styles.innerContainer, { backgroundColor: color }]}>
           <Text style={styles.text}>{title}</Text>
