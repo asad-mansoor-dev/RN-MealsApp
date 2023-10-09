@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -28,6 +28,12 @@ export default function App() {
           <Stack.Screen
             name="MealsOverview"
             component={MealsOverviewScreen}
+            // options={({ route, navigation }) => {
+            //   const catId = route.params.categoryID;
+            //   return {
+            //     title: catId,
+            //   };
+            // }}
           ></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
