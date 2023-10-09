@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 // import { useRoute } from "@react-navigation/native";
 import { MEALS } from "../data/dummy-data";
 import MealItem from "../components/MealItem";
+import Meal from "../models/meal";
 
 function MealsOverviewScreen({ route }) {
   // const route = useRoute();
@@ -12,7 +13,7 @@ function MealsOverviewScreen({ route }) {
   });
 
   function renderMealItem(itemData) {
-    return <MealItem title={itemData.item.title} />;
+    return <MealItem item={itemData.item} />;
   }
 
   return (
